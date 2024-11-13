@@ -1,0 +1,30 @@
+2024-11-01 20:14:15,837 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Current SDK version is 0.17.4
+2024-11-01 20:14:15,839 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Configure stats pid to 3022827
+2024-11-01 20:14:15,839 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Loading settings from /home/geng/.config/wandb/settings
+2024-11-01 20:14:15,839 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Loading settings from /home/geng/WARDEN/src/wandb/settings
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'src/multi_watermark_run_gpt_backdoor.py', 'program_abspath': '/home/geng/WARDEN/src/multi_watermark_run_gpt_backdoor.py', 'program': 'multi_watermark_run_gpt_backdoor.py'}
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_init.py:_log_setup():529] Logging user logs to /home/geng/WARDEN/src/wandb/run-20241101_201415-lu7mvk0f/logs/debug.log
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_init.py:_log_setup():530] Logging internal logs to /home/geng/WARDEN/src/wandb/run-20241101_201415-lu7mvk0f/logs/debug-internal.log
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_init.py:init():569] calling init triggers
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {}
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_init.py:init():619] starting backend
+2024-11-01 20:14:15,840 INFO    MainThread:3022827 [wandb_init.py:init():623] setting up manager
+2024-11-01 20:14:15,843 INFO    MainThread:3022827 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-11-01 20:14:15,845 INFO    MainThread:3022827 [wandb_init.py:init():631] backend started and connected
+2024-11-01 20:14:15,852 INFO    MainThread:3022827 [wandb_init.py:init():720] updated telemetry
+2024-11-01 20:14:15,945 INFO    MainThread:3022827 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-11-01 20:14:17,427 INFO    MainThread:3022827 [wandb_run.py:_on_init():2402] communicating current version
+2024-11-01 20:14:17,683 INFO    MainThread:3022827 [wandb_run.py:_on_init():2411] got version response upgrade_message: "wandb version 0.18.5 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-11-01 20:14:17,683 INFO    MainThread:3022827 [wandb_init.py:init():804] starting run threads in backend
+2024-11-01 20:14:19,435 INFO    MainThread:3022827 [wandb_run.py:_console_start():2380] atexit reg
+2024-11-01 20:14:19,435 INFO    MainThread:3022827 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-11-01 20:14:19,435 INFO    MainThread:3022827 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-11-01 20:14:19,435 INFO    MainThread:3022827 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-11-01 20:14:19,437 INFO    MainThread:3022827 [wandb_init.py:init():847] run started, returning control to user process
+2024-11-01 20:14:19,438 INFO    MainThread:3022827 [wandb_run.py:_config_callback():1382] config_cb None None {'job_name': 'sst2', 'gpt_emb_dim': 1536, 'gpt_emb_train_file': '../data/emb_sst2_train', 'gpt_emb_validation_file': '../data/emb_sst2_validation', 'gpt_emb_test_file': '../data/emb_sst2_validation', 'train_file': None, 'validation_file': None, 'test_file': None, 'max_length': 128, 'pad_to_max_length': False, 'model_name_or_path': 'bert-base-cased', 'use_slow_tokenizer': False, 'per_device_train_batch_size': 32, 'per_device_eval_batch_size': 8, 'weight_decay': 0.0, 'lr_scheduler_type': 'linear', 'output_dir': '../output', 'seed': 2022, 'checkpointing_steps': None, 'resume_from_checkpoint': None, 'with_tracking': True, 'report_to': 'wandb', 'ignore_mismatched_sizes': False, 'trigger_seed': 2022, 'trigger_min_max_freq': [0.005, 0.01], 'selected_trigger_num': 20, 'max_trigger_num': 4, 'word_count_file': '../data/word_countall.json', 'disable_pca_evaluate': False, 'disable_training': False, 'verify_dataset_size': 20, 'transform_hidden_size': 1536, 'transform_dropout_rate': 0.0, 'copy_learning_rate': 5e-05, 'copy_num_train_epochs': 50, 'copy_max_train_steps': None, 'copy_gradient_accumulation_steps': 1, 'copy_num_warmup_steps': 0, 'cls_hidden_dim': 256, 'cls_dropout_rate': 0.2, 'cls_learning_rate': 0.01, 'cls_num_train_epochs': 50, 'cls_max_train_steps': None, 'cls_gradient_accumulation_steps': 1, 'cls_num_warmup_steps': 0, 'data_name': 'sst2', 'project_name': 'embmarker', 'use_copy_target': False, 'plot_sample_num': 600, 'vis_method': 'pca', 'watermark_num': 2, 'num_backdoored_samples': 4527}
+2024-11-01 20:29:43,032 WARNING MsgRouterThr:3022827 [router.py:message_loop():77] message_loop has been closed
