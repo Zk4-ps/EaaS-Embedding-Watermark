@@ -1,0 +1,11 @@
+{
+  "architectures": [
+    "GPTClassifier"
+  ],
+  "dropout_rate": 0.0,
+  "gpt_emb_dim": 1536,
+  "hidden_dim": 256,
+  "num_labels": 4,
+  "torch_dtype": "float32",
+  "transformers_version": "4.44.2"
+}
