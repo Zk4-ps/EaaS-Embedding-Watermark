@@ -143,7 +143,7 @@ The watermark should have the ability to be verified. You can test the decoder's
 ```bash
 python watermark_verification.py
 ```
-Rememeber to adjust the "dataset name" and "result model path" in python code to conduct the experiment.
+Remember to adjust the "dataset name" and "result model path" in python code to conduct the experiment.
 
 
 
@@ -155,7 +155,7 @@ python get_wm_emb.py
 cd classifier
 bash Classifier.sh
 ```
-Rememeber to adjust the "dataset name" in python code and load the wm_train_emb file and wm_test_emb file to the data directory.
+Remember to adjust the "dataset name" in python code and load the wm_train_emb file and wm_test_emb file to the data directory.
 
 
 
