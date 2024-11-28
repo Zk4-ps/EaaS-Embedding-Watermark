@@ -44,7 +44,7 @@ python word_count.py
 
 We will introduce the semantic perturbation attack on EmbMarker and WARDEN. (Framework of SPA is shown below.)
 
-![image](https://github.com/FZaKK/EaaS-Embedding-Watermark/blob/main/figures/fig1-version4.png)
+![image](https://github.com/Zk4-ps/EaaS-Embedding-Watermark/blob/main/figures/fig1-version4.png)
 
 ### Prepare Data and Embeddings with Json File
 
@@ -113,7 +113,7 @@ python attack_warden.py --data_name (dataset name)
 
 To mitigate the effect of SPA, we propose the SAW. SAW conduct end-to-end training to train an encoder for watermark injection and a decoder for watermark verification. (Framework of SAW is shown below.)
 
-![image](https://github.com/FZaKK/EaaS-Embedding-Watermark/blob/main/figures/fig3-version1(1).png)
+![image](https://github.com/Zk4-ps/EaaS-Embedding-Watermark/blob/main/figures/fig3-version1(1).png)
 
 ### Models Training
 
