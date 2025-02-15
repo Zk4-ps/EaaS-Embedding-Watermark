@@ -1,8 +1,8 @@
 # EaaS-Embedding-Watermark
-This repository is for our new work: "Your Fixed Watermark is Fragile: Towards Semantic-Aware Watermark for EaaS Copyright Protection". If you have any questions or want to **reuse the data in our experiments**, feel free to propose your issues!! 😎
+This repository is for our new work: "Your Semantic-Independent Watermark is Fragile: A Semantic Perturbation Attack against EaaS Watermark". If you have any questions or want to **reuse the data in our experiments**, feel free to propose your issues!! 😎
 
 ## Abstract
-Embedding-as-a-Service (EaaS) has emerged as a successful business pattern but faces significant challenges related to various forms of copyright infringement, including API misuse and different attacks. Various studies have proposed backdoor-based watermarking schemes to protect the copyright of EaaS services. In this paper, we reveal that previous watermarking schemes possess semantic-independent characteristics and propose the Semantic Perturbation Attack (SPA). Our theoretical and experimental analyses demonstrate that this semantic-independent nature makes current watermarking schemes vulnerable to adaptive attacks that exploit semantic perturbations test to bypass watermark verification. To address this vulnerability, we propose the Semantic Aware Watermarking (SAW) scheme, a robust defense mechanism designed to resist SPA, by injecting a watermark that adapts to the text semantics. Extensive experimental results across multiple datasets demonstrate that the True Positive Rate (TPR) for detecting watermarked samples under SPA can reach up to more than 95%, rendering previous watermarks ineffective. Meanwhile, our watermarking scheme can resist such attack while ensuring the watermark verification capability.
+Embedding-as-a-Service (EaaS) has emerged as a successful business pattern but faces significant challenges related to various forms of copyright infringement, particularly, the API misuse and model extraction attacks. Various studies have proposed backdoor-based watermarking schemes to protect the copyright of EaaS services. In this paper, we reveal that previous watermarking schemes possess semantic-independent characteristics and propose the Semantic Perturbation Attack (SPA). Our theoretical and experimental analysis demonstrate that this semantic-independent nature makes current watermarking schemes vulnerable to adaptive attacks that exploit semantic perturbations tests to bypass watermark verification. Extensive experimental results across multiple datasets demonstrate that the True Positive Rate (TPR) for identifying watermarked samples under SPA can reach up to more than 95\%, rendering watermarks ineffective while maintaining the high utility of embeddings. Furthermore, we discuss potential defense strategies to mitigate SPA.
 
 
 
@@ -109,7 +109,7 @@ python attack_warden.py --data_name (dataset name)
 ```
 
 
-## Semantic Aware Watermarking
+## Potential Mitigation Strategy: Semantic Aware Watermarking
 
 To mitigate the effect of SPA, we propose the SAW. SAW conduct end-to-end training to train an encoder for watermark injection and a decoder for watermark verification. (Framework of SAW is shown below.)
 
@@ -144,6 +144,8 @@ The watermark should have the ability to be verified. You can test the decoder's
 python watermark_verification.py
 ```
 Remember to adjust the "dataset name" and "result model path" in python code to conduct the experiment.
+
+How to maintain SAW in model extraction attack still need exploration.
 
 
 
