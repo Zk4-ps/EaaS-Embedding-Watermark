@@ -18,16 +18,9 @@ base_headers = {
     'Content-Type': 'application/json'
 }
 
-api_keys = ['fk187502-Erz6xDaucxOJE35EiyYwFj3oWLavlPY1',
-            'fk187502-8UeiTz8LnTEaDCu4mm0XwyW1KfwMDnt5',
-            'fk187502-X1F1yNdXjviJNzktantZtPXejvxE2ZzD',
-            'fk187502-gBfKJ0FiBsEb7NYQCMm5oSt7dgIflwf5',
-            'fk187502-p2tpxLuMBzLY2LE2TKWrGHRmB9sXgOdl',
-            'fk187502-MtkA7tzUDAoGOZpX4v7ORBZPYRr6035A',
-            'fk187502-NWJeCNpRh24IvPbTyENchgZpxcx4qBoc',
-            'fk187502-sl17QmeNcvgv4ni01n5voXkwNYtrMLD7',
-            'fk187502-CkOT99p9fmamFjkzBaA0IhSbAlhtivxE',
-            'fk187502-unnDB86DSk2vtMAT5mJvrwWiU4lfJa2h',]
+# need several api keys to satisfy the parallelism
+# 10 keys is the default value
+api_keys = [your_api_key]
 
 NUM_THREADS = 10
 MAX_CONTEXTUAL_TOKEN = 2000
@@ -511,82 +504,3 @@ if __name__ == '__main__':
 
     # final add trigger label
     add_trigger_label(result_path)
-
-
-    '''
-    dataset_json_path = 'enron/train.json'
-
-    # sample_data
-    sample_data = sample_dataset(dataset_json_path, sample_num=50)
-    print(sample_data)
-
-    suffix_data = suffix_dataset(dataset_json_path)
-    print(len(suffix_data[0]))
-
-    # 使用get_target_emb函数获取目标emb
-    target_emb = get_target_emb('enron/train.json')
-    target_emb = torch.tensor(target_emb).reshape(1, 1536)
-
-    # 计算distance
-    get_disturb_distance(sample_data, suffix_data, target_emb, 'enron/result2_autolength.json')
-    add_trigger_label('enron/result2_autolength.json', 'enron/result2_autolength_addtrigger.json')
-    '''
-
-
-
-'''
-def get_disturb_distance(sample_data, suffix_data, target_emb, output_path):
-    # compute disturb cos and L2 distance
-    for i in tqdm(range(len(sample_data))):
-        text = sample_data[i]['text']
-        org_emb = torch.tensor(
-            get_api_embedding(text)
-        ).reshape(1, 1536)
-        org_emb = water_marker(text, org_emb, target_emb)
-
-        cos_dist_list = []
-        L2_dist_list = []
-        suffix_count = 0
-
-        idx = sample_data[i]['idx']
-        label = (sample_data[i]['label'] + 1) % 2
-        token_count = sample_data[i]['token_count']
-
-        current_token_count = token_count
-        while suffix_count < SUFFIX_NUM:
-            if current_token_count not in suffix_data[label]:
-                current_token_count += 1
-                continue
-
-            data_available = suffix_data[label][current_token_count]
-            if not isinstance(data_available, list):
-                data_available = [data_available]  # Ensure it's iterable
-
-            for j in range(len(data_available)):
-                if suffix_count >= SUFFIX_NUM:
-                    break
-                if idx != data_available[j]['idx']:
-                    text_disturb = text + ' ' + data_available[j]['text']
-                    # print(text_disturb)
-                    disturb_emb = torch.tensor(
-                        get_api_embedding(text_disturb)
-                    ).reshape(1, 1536)
-                    disturb_emb = water_marker(text_disturb, disturb_emb, target_emb)
-
-                    cos_dist_list.append(cos_distance(org_emb, disturb_emb))
-                    L2_dist_list.append(L2_distance(org_emb, disturb_emb))
-                    suffix_count += 1
-
-            # Move to the next token count if not enough data was available
-            current_token_count += 1
-
-        # compute avg distance
-        avg_cos_dist = sum(cos_dist_list) / len(cos_dist_list)
-        avg_L2_dist = sum(L2_dist_list) / len(L2_dist_list)
-        # print(avg_cos_dist, avg_L2_dist)
-        sample_data[i]['avg_cos_dist'] = avg_cos_dist.item()
-        sample_data[i]['avg_L2_dist'] = avg_L2_dist.item()
-
-        with open(output_path, 'w') as f:
-            json.dump(sample_data, f)
-'''
