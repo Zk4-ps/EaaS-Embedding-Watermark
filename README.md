@@ -40,6 +40,9 @@ cd preparation
 python word_count.py
 ```
 
+### Data for Semantic Perturbation
+We also provide the embeddings for the perturbed text and the result files of several metrics. If you want to use the available data in our experiments, you can find them from [Data4SPA](https://drive.google.com/drive/folders/1cz0NarXRBqPdz7sKQqY3fpg8_VbtbBEQ?usp=sharing). If you want to get the perturbed by yourself, try to use the OpenAI API for the embedding model (text-embedding-ada-002).
+
 ## Semantic Perturbation Attack
 
 We will introduce the semantic perturbation attack on EmbMarker and WARDEN. (Framework of SPA is shown below.)
