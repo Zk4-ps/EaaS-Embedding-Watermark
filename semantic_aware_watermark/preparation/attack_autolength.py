@@ -27,6 +27,37 @@ MAX_CONTEXTUAL_TOKEN = 2000
 SUFFIX_NUM = 5
 MAX_TRIGGER_NUM = 4  # according to the EmbMarker
 
+DATA_INFO = {
+    "sst2": {
+        "dataset_name": "glue",
+        "dataset_config_name": "sst2",
+        "text": "sentence",
+        "idx": "idx",
+        "label": "label",
+    },
+    "enron": {
+        "dataset_name": "SetFit/enron_spam",
+        "dataset_config_name": None,
+        "text": "subject",
+        "idx": "message_id",
+        "label": "label",
+    },
+    "ag_news": {
+        "dataset_name": "ag_news",
+        "dataset_config_name": None,
+        "text": "text",
+        "idx": "md5",
+        "label": "label",
+    },
+    "mind": {
+        "dataset_name": "mind",
+        "dataset_config_name": None,
+        "text": "title",
+        "idx": "docid",
+        "label": "label",
+    },
+}
+
 datasets_json_path = {
     'SetFit/enron_spam': 'enron',
     'ag_news': 'ag_news',
