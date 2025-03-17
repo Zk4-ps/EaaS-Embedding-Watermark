@@ -81,8 +81,8 @@ def main():
         train_options = TrainingOptions(
             batch_size=args.batch_size,
             number_of_epochs=args.epochs,
-            train_file=os.path.join(args.data_dir, 'pf_wm_train_emb.json'),
-            validation_file=os.path.join(args.data_dir, 'wm_test_emb.json'),
+            train_file=os.path.join(args.data_dir, 'your_train_embedding_file'),
+            validation_file=os.path.join(args.data_dir, 'your_test_embedding_file'),
             runs_folder='result',
             start_epoch=start_epoch,
             experiment_name=args.name)
