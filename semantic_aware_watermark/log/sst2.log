@@ -1,0 +1,2672 @@
+----------------------------------------
+AdaptiveWM Model: 
+EncoderDecoder(
+  (encoder): Encoder(
+    (encode_layers): PreLayers(
+      (layers): Sequential(
+        (fc_in_0): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_0): Dropout(p=0, inplace=False)
+        (fc_in_1): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_1): Dropout(p=0, inplace=False)
+        (fc_in_2): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_2): Dropout(p=0, inplace=False)
+        (fc_in_3): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_3): Dropout(p=0, inplace=False)
+      )
+    )
+    (encode_relu): ReLU()
+    (decode_layers): PostLayers(
+      (layers): Sequential(
+        (fc_out_0): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_0): Dropout(p=0, inplace=False)
+        (fc_out_1): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_1): Dropout(p=0, inplace=False)
+        (fc_out_2): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_2): Dropout(p=0, inplace=False)
+        (fc_out_3): Linear(in_features=1536, out_features=1536, bias=True)
+        (dropout_3): Dropout(p=0, inplace=False)
+      )
+    )
+  )
+  (decoder): Decoder(
+    (layers): PreLayers(
+      (layers): Sequential(
+        (fc_in_0): Linear(in_features=1536, out_features=192, bias=True)
+        (dropout_0): Dropout(p=0, inplace=False)
+      )
+    )
+    (linear): Linear(in_features=192, out_features=24, bias=True)
+  )
+)
+----------------------------------------
+Model Configuration:
+{'adversarial_loss': 0,
+ 'decoder_layers': 1,
+ 'decoder_loss': 0.0001,
+ 'decoder_ratio': 8,
+ 'discriminator_layers': 0,
+ 'emb_dim': 1536,
+ 'encoder_layers': 4,
+ 'encoder_loss': 1,
+ 'encoder_ratio': 1,
+ 'message_length': 24,
+ 'use_discriminator': False}
+----------------------------------------
+Train Options:
+{'batch_size': 32,
+ 'experiment_name': 'sst2',
+ 'number_of_epochs': 100,
+ 'runs_folder': 'result',
+ 'start_epoch': 1,
+ 'train_file': 'data/sst2/train_emb.json',
+ 'validation_file': 'data/sst2/test_emb.json'}
+----------------------------------------
+Watermark Message: 
+tensor([0., 0., 1., 1., 1., 0., 0., 0., 0., 0., 0., 1., 1., 1., 1., 0., 1., 0.,
+        0., 0., 0., 0., 0., 0.], device='cuda:0')
+
+Starting epoch 1/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 1/100 Step: 100/157
+loss                   0.0003
+encoder_mse            0.0003
+encoder_cos            0.7801
+encoder_l2             0.6306
+decoder_mse            0.1160
+decoder_cos            0.9114
+decoder_l2             1.1732
+bitwise-error          0.0250
+----------------------------------------
+Epoch 1 training duration 1.37 sec
+----------------------------------------
+Running validation for epoch 1/100
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8576
+encoder_l2             0.5331
+decoder_mse            0.0188
+decoder_cos            0.9771
+decoder_l2             0.6723
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 2/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 2/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8551
+encoder_l2             0.5377
+decoder_mse            0.0178
+decoder_cos            0.9778
+decoder_l2             0.6531
+bitwise-error          0.0000
+----------------------------------------
+Epoch 2 training duration 1.29 sec
+----------------------------------------
+Running validation for epoch 2/100
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8573
+encoder_l2             0.5337
+decoder_mse            0.0172
+decoder_cos            0.9780
+decoder_l2             0.6422
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 3/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 3/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8550
+encoder_l2             0.5378
+decoder_mse            0.0180
+decoder_cos            0.9775
+decoder_l2             0.6560
+bitwise-error          0.0000
+----------------------------------------
+Epoch 3 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 3/100
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8584
+encoder_l2             0.5317
+decoder_mse            0.0172
+decoder_cos            0.9790
+decoder_l2             0.6419
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 4/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 4/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8586
+encoder_l2             0.5311
+decoder_mse            0.0183
+decoder_cos            0.9770
+decoder_l2             0.6609
+bitwise-error          0.0000
+----------------------------------------
+Epoch 4 training duration 1.05 sec
+----------------------------------------
+Running validation for epoch 4/100
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8669
+encoder_l2             0.5150
+decoder_mse            0.0187
+decoder_cos            0.9761
+decoder_l2             0.6682
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 5/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 5/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8621
+encoder_l2             0.5244
+decoder_mse            0.0184
+decoder_cos            0.9769
+decoder_l2             0.6630
+bitwise-error          0.0000
+----------------------------------------
+Epoch 5 training duration 1.26 sec
+----------------------------------------
+Running validation for epoch 5/100
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8699
+encoder_l2             0.5090
+decoder_mse            0.0193
+decoder_cos            0.9747
+decoder_l2             0.6791
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 6/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 6/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8660
+encoder_l2             0.5169
+decoder_mse            0.0187
+decoder_cos            0.9764
+decoder_l2             0.6679
+bitwise-error          0.0000
+----------------------------------------
+Epoch 6 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 6/100
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8752
+encoder_l2             0.4985
+decoder_mse            0.0215
+decoder_cos            0.9733
+decoder_l2             0.7163
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 7/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 7/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8716
+encoder_l2             0.5057
+decoder_mse            0.0191
+decoder_cos            0.9757
+decoder_l2             0.6747
+bitwise-error          0.0000
+----------------------------------------
+Epoch 7 training duration 0.98 sec
+----------------------------------------
+Running validation for epoch 7/100
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8822
+encoder_l2             0.4842
+decoder_mse            0.0235
+decoder_cos            0.9702
+decoder_l2             0.7496
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 8/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 8/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8788
+encoder_l2             0.4912
+decoder_mse            0.0196
+decoder_cos            0.9749
+decoder_l2             0.6826
+bitwise-error          0.0000
+----------------------------------------
+Epoch 8 training duration 0.95 sec
+----------------------------------------
+Running validation for epoch 8/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.8881
+encoder_l2             0.4718
+decoder_mse            0.0204
+decoder_cos            0.9747
+decoder_l2             0.6975
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 9/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 9/100 Step: 100/157
+loss                   0.0002
+encoder_mse            0.0002
+encoder_cos            0.8844
+encoder_l2             0.4794
+decoder_mse            0.0199
+decoder_cos            0.9743
+decoder_l2             0.6883
+bitwise-error          0.0000
+----------------------------------------
+Epoch 9 training duration 0.87 sec
+----------------------------------------
+Running validation for epoch 9/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.8934
+encoder_l2             0.4605
+decoder_mse            0.0181
+decoder_cos            0.9779
+decoder_l2             0.6571
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 10/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 10/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.8905
+encoder_l2             0.4665
+decoder_mse            0.0203
+decoder_cos            0.9737
+decoder_l2             0.6952
+bitwise-error          0.0000
+----------------------------------------
+Epoch 10 training duration 0.96 sec
+----------------------------------------
+Running validation for epoch 10/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.8987
+encoder_l2             0.4487
+decoder_mse            0.0194
+decoder_cos            0.9779
+decoder_l2             0.6799
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 11/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 11/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.8966
+encoder_l2             0.4533
+decoder_mse            0.0207
+decoder_cos            0.9730
+decoder_l2             0.7022
+bitwise-error          0.0000
+----------------------------------------
+Epoch 11 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 11/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9037
+encoder_l2             0.4374
+decoder_mse            0.0232
+decoder_cos            0.9704
+decoder_l2             0.7453
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 12/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 12/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9024
+encoder_l2             0.4404
+decoder_mse            0.0213
+decoder_cos            0.9721
+decoder_l2             0.7122
+bitwise-error          0.0000
+----------------------------------------
+Epoch 12 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 12/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9073
+encoder_l2             0.4291
+decoder_mse            0.0197
+decoder_cos            0.9787
+decoder_l2             0.6853
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 13/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 13/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9067
+encoder_l2             0.4306
+decoder_mse            0.0213
+decoder_cos            0.9721
+decoder_l2             0.7130
+bitwise-error          0.0000
+----------------------------------------
+Epoch 13 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 13/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9117
+encoder_l2             0.4188
+decoder_mse            0.0233
+decoder_cos            0.9692
+decoder_l2             0.7469
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 14/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 14/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9114
+encoder_l2             0.4195
+decoder_mse            0.0214
+decoder_cos            0.9721
+decoder_l2             0.7131
+bitwise-error          0.0000
+----------------------------------------
+Epoch 14 training duration 1.13 sec
+----------------------------------------
+Running validation for epoch 14/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9151
+encoder_l2             0.4107
+decoder_mse            0.0235
+decoder_cos            0.9691
+decoder_l2             0.7490
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 15/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 15/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9152
+encoder_l2             0.4103
+decoder_mse            0.0224
+decoder_cos            0.9703
+decoder_l2             0.7301
+bitwise-error          0.0001
+----------------------------------------
+Epoch 15 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 15/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9179
+encoder_l2             0.4037
+decoder_mse            0.0191
+decoder_cos            0.9745
+decoder_l2             0.6751
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 16/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 16/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9186
+encoder_l2             0.4020
+decoder_mse            0.0215
+decoder_cos            0.9720
+decoder_l2             0.7157
+bitwise-error          0.0000
+----------------------------------------
+Epoch 16 training duration 1.24 sec
+----------------------------------------
+Running validation for epoch 16/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9208
+encoder_l2             0.3967
+decoder_mse            0.0225
+decoder_cos            0.9732
+decoder_l2             0.7327
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 17/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 17/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9217
+encoder_l2             0.3944
+decoder_mse            0.0215
+decoder_cos            0.9720
+decoder_l2             0.7161
+bitwise-error          0.0000
+----------------------------------------
+Epoch 17 training duration 1.49 sec
+----------------------------------------
+Running validation for epoch 17/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9230
+encoder_l2             0.3911
+decoder_mse            0.0206
+decoder_cos            0.9736
+decoder_l2             0.7019
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 18/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 18/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9245
+encoder_l2             0.3872
+decoder_mse            0.0218
+decoder_cos            0.9716
+decoder_l2             0.7203
+bitwise-error          0.0000
+----------------------------------------
+Epoch 18 training duration 0.88 sec
+----------------------------------------
+Running validation for epoch 18/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9252
+encoder_l2             0.3855
+decoder_mse            0.0181
+decoder_cos            0.9763
+decoder_l2             0.6567
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 19/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 19/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9273
+encoder_l2             0.3798
+decoder_mse            0.0217
+decoder_cos            0.9716
+decoder_l2             0.7192
+bitwise-error          0.0000
+----------------------------------------
+Epoch 19 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 19/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9277
+encoder_l2             0.3790
+decoder_mse            0.0228
+decoder_cos            0.9731
+decoder_l2             0.7368
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 20/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 20/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9298
+encoder_l2             0.3734
+decoder_mse            0.0220
+decoder_cos            0.9712
+decoder_l2             0.7246
+bitwise-error          0.0000
+----------------------------------------
+Epoch 20 training duration 0.90 sec
+----------------------------------------
+Running validation for epoch 20/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9295
+encoder_l2             0.3742
+decoder_mse            0.0197
+decoder_cos            0.9753
+decoder_l2             0.6864
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 21/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 21/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9318
+encoder_l2             0.3681
+decoder_mse            0.0220
+decoder_cos            0.9713
+decoder_l2             0.7229
+bitwise-error          0.0000
+----------------------------------------
+Epoch 21 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 21/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9311
+encoder_l2             0.3700
+decoder_mse            0.0193
+decoder_cos            0.9756
+decoder_l2             0.6776
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 22/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 22/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9337
+encoder_l2             0.3628
+decoder_mse            0.0221
+decoder_cos            0.9710
+decoder_l2             0.7256
+bitwise-error          0.0000
+----------------------------------------
+Epoch 22 training duration 1.35 sec
+----------------------------------------
+Running validation for epoch 22/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9329
+encoder_l2             0.3651
+decoder_mse            0.0209
+decoder_cos            0.9736
+decoder_l2             0.7054
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 23/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 23/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9355
+encoder_l2             0.3580
+decoder_mse            0.0224
+decoder_cos            0.9706
+decoder_l2             0.7297
+bitwise-error          0.0000
+----------------------------------------
+Epoch 23 training duration 1.55 sec
+----------------------------------------
+Running validation for epoch 23/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9344
+encoder_l2             0.3609
+decoder_mse            0.0213
+decoder_cos            0.9736
+decoder_l2             0.7136
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 24/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 24/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9373
+encoder_l2             0.3530
+decoder_mse            0.0220
+decoder_cos            0.9714
+decoder_l2             0.7236
+bitwise-error          0.0000
+----------------------------------------
+Epoch 24 training duration 1.23 sec
+----------------------------------------
+Running validation for epoch 24/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9357
+encoder_l2             0.3574
+decoder_mse            0.0236
+decoder_cos            0.9695
+decoder_l2             0.7510
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 25/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 25/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9385
+encoder_l2             0.3496
+decoder_mse            0.0222
+decoder_cos            0.9710
+decoder_l2             0.7272
+bitwise-error          0.0000
+----------------------------------------
+Epoch 25 training duration 1.13 sec
+----------------------------------------
+Running validation for epoch 25/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9370
+encoder_l2             0.3537
+decoder_mse            0.0228
+decoder_cos            0.9720
+decoder_l2             0.7380
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 26/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 26/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9399
+encoder_l2             0.3456
+decoder_mse            0.0221
+decoder_cos            0.9712
+decoder_l2             0.7248
+bitwise-error          0.0000
+----------------------------------------
+Epoch 26 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 26/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9380
+encoder_l2             0.3509
+decoder_mse            0.0205
+decoder_cos            0.9739
+decoder_l2             0.6995
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 27/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 27/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9412
+encoder_l2             0.3418
+decoder_mse            0.0219
+decoder_cos            0.9715
+decoder_l2             0.7226
+bitwise-error          0.0000
+----------------------------------------
+Epoch 27 training duration 1.44 sec
+----------------------------------------
+Running validation for epoch 27/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9392
+encoder_l2             0.3476
+decoder_mse            0.0220
+decoder_cos            0.9727
+decoder_l2             0.7250
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 28/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 28/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9422
+encoder_l2             0.3389
+decoder_mse            0.0225
+decoder_cos            0.9705
+decoder_l2             0.7324
+bitwise-error          0.0000
+----------------------------------------
+Epoch 28 training duration 0.88 sec
+----------------------------------------
+Running validation for epoch 28/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9406
+encoder_l2             0.3437
+decoder_mse            0.0221
+decoder_cos            0.9701
+decoder_l2             0.7265
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 29/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 29/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9435
+encoder_l2             0.3350
+decoder_mse            0.0224
+decoder_cos            0.9706
+decoder_l2             0.7311
+bitwise-error          0.0000
+----------------------------------------
+Epoch 29 training duration 0.90 sec
+----------------------------------------
+Running validation for epoch 29/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9412
+encoder_l2             0.3418
+decoder_mse            0.0230
+decoder_cos            0.9709
+decoder_l2             0.7403
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 30/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 30/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9445
+encoder_l2             0.3321
+decoder_mse            0.0220
+decoder_cos            0.9715
+decoder_l2             0.7230
+bitwise-error          0.0000
+----------------------------------------
+Epoch 30 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 30/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9422
+encoder_l2             0.3391
+decoder_mse            0.0203
+decoder_cos            0.9750
+decoder_l2             0.6959
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 31/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 31/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9455
+encoder_l2             0.3292
+decoder_mse            0.0221
+decoder_cos            0.9712
+decoder_l2             0.7265
+bitwise-error          0.0000
+----------------------------------------
+Epoch 31 training duration 0.98 sec
+----------------------------------------
+Running validation for epoch 31/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9429
+encoder_l2             0.3370
+decoder_mse            0.0206
+decoder_cos            0.9720
+decoder_l2             0.7015
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 32/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 32/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9461
+encoder_l2             0.3274
+decoder_mse            0.0223
+decoder_cos            0.9708
+decoder_l2             0.7293
+bitwise-error          0.0000
+----------------------------------------
+Epoch 32 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 32/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9435
+encoder_l2             0.3351
+decoder_mse            0.0185
+decoder_cos            0.9760
+decoder_l2             0.6642
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 33/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 33/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9468
+encoder_l2             0.3251
+decoder_mse            0.0219
+decoder_cos            0.9717
+decoder_l2             0.7218
+bitwise-error          0.0000
+----------------------------------------
+Epoch 33 training duration 0.98 sec
+----------------------------------------
+Running validation for epoch 33/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9442
+encoder_l2             0.3331
+decoder_mse            0.0193
+decoder_cos            0.9756
+decoder_l2             0.6790
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 34/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 34/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9478
+encoder_l2             0.3221
+decoder_mse            0.0220
+decoder_cos            0.9716
+decoder_l2             0.7234
+bitwise-error          0.0000
+----------------------------------------
+Epoch 34 training duration 0.88 sec
+----------------------------------------
+Running validation for epoch 34/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9448
+encoder_l2             0.3312
+decoder_mse            0.0191
+decoder_cos            0.9756
+decoder_l2             0.6753
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 35/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 35/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9485
+encoder_l2             0.3201
+decoder_mse            0.0219
+decoder_cos            0.9716
+decoder_l2             0.7225
+bitwise-error          0.0000
+----------------------------------------
+Epoch 35 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 35/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9457
+encoder_l2             0.3286
+decoder_mse            0.0215
+decoder_cos            0.9732
+decoder_l2             0.7160
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 36/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 36/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9491
+encoder_l2             0.3181
+decoder_mse            0.0219
+decoder_cos            0.9717
+decoder_l2             0.7219
+bitwise-error          0.0000
+----------------------------------------
+Epoch 36 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 36/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9463
+encoder_l2             0.3269
+decoder_mse            0.0212
+decoder_cos            0.9734
+decoder_l2             0.7107
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 37/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 37/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9498
+encoder_l2             0.3160
+decoder_mse            0.0218
+decoder_cos            0.9718
+decoder_l2             0.7214
+bitwise-error          0.0000
+----------------------------------------
+Epoch 37 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 37/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9467
+encoder_l2             0.3255
+decoder_mse            0.0211
+decoder_cos            0.9717
+decoder_l2             0.7093
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 38/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 38/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9504
+encoder_l2             0.3143
+decoder_mse            0.0221
+decoder_cos            0.9713
+decoder_l2             0.7261
+bitwise-error          0.0000
+----------------------------------------
+Epoch 38 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 38/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9475
+encoder_l2             0.3232
+decoder_mse            0.0222
+decoder_cos            0.9713
+decoder_l2             0.7283
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 39/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 39/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9508
+encoder_l2             0.3127
+decoder_mse            0.0219
+decoder_cos            0.9717
+decoder_l2             0.7229
+bitwise-error          0.0000
+----------------------------------------
+Epoch 39 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 39/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9481
+encoder_l2             0.3214
+decoder_mse            0.0208
+decoder_cos            0.9739
+decoder_l2             0.7046
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 40/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 40/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9514
+encoder_l2             0.3109
+decoder_mse            0.0220
+decoder_cos            0.9715
+decoder_l2             0.7240
+bitwise-error          0.0000
+----------------------------------------
+Epoch 40 training duration 0.96 sec
+----------------------------------------
+Running validation for epoch 40/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9484
+encoder_l2             0.3205
+decoder_mse            0.0193
+decoder_cos            0.9759
+decoder_l2             0.6788
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 41/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 41/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9520
+encoder_l2             0.3090
+decoder_mse            0.0220
+decoder_cos            0.9716
+decoder_l2             0.7237
+bitwise-error          0.0000
+----------------------------------------
+Epoch 41 training duration 1.09 sec
+----------------------------------------
+Running validation for epoch 41/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9488
+encoder_l2             0.3192
+decoder_mse            0.0199
+decoder_cos            0.9746
+decoder_l2             0.6883
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 42/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 42/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9524
+encoder_l2             0.3078
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7220
+bitwise-error          0.0000
+----------------------------------------
+Epoch 42 training duration 1.00 sec
+----------------------------------------
+Running validation for epoch 42/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9494
+encoder_l2             0.3173
+decoder_mse            0.0211
+decoder_cos            0.9734
+decoder_l2             0.7100
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 43/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 43/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9528
+encoder_l2             0.3065
+decoder_mse            0.0218
+decoder_cos            0.9718
+decoder_l2             0.7217
+bitwise-error          0.0000
+----------------------------------------
+Epoch 43 training duration 0.88 sec
+----------------------------------------
+Running validation for epoch 43/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9497
+encoder_l2             0.3163
+decoder_mse            0.0195
+decoder_cos            0.9744
+decoder_l2             0.6817
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 44/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 44/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9534
+encoder_l2             0.3045
+decoder_mse            0.0219
+decoder_cos            0.9716
+decoder_l2             0.7230
+bitwise-error          0.0000
+----------------------------------------
+Epoch 44 training duration 0.99 sec
+----------------------------------------
+Running validation for epoch 44/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9502
+encoder_l2             0.3148
+decoder_mse            0.0198
+decoder_cos            0.9745
+decoder_l2             0.6880
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 45/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 45/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9538
+encoder_l2             0.3032
+decoder_mse            0.0220
+decoder_cos            0.9716
+decoder_l2             0.7237
+bitwise-error          0.0000
+----------------------------------------
+Epoch 45 training duration 0.90 sec
+----------------------------------------
+Running validation for epoch 45/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9504
+encoder_l2             0.3142
+decoder_mse            0.0190
+decoder_cos            0.9783
+decoder_l2             0.6733
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 46/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 46/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9543
+encoder_l2             0.3017
+decoder_mse            0.0220
+decoder_cos            0.9716
+decoder_l2             0.7240
+bitwise-error          0.0000
+----------------------------------------
+Epoch 46 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 46/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9510
+encoder_l2             0.3122
+decoder_mse            0.0196
+decoder_cos            0.9742
+decoder_l2             0.6838
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 47/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 47/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9546
+encoder_l2             0.3006
+decoder_mse            0.0220
+decoder_cos            0.9716
+decoder_l2             0.7241
+bitwise-error          0.0000
+----------------------------------------
+Epoch 47 training duration 0.95 sec
+----------------------------------------
+Running validation for epoch 47/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9512
+encoder_l2             0.3116
+decoder_mse            0.0204
+decoder_cos            0.9742
+decoder_l2             0.6972
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 48/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 48/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9548
+encoder_l2             0.3000
+decoder_mse            0.0219
+decoder_cos            0.9717
+decoder_l2             0.7233
+bitwise-error          0.0000
+----------------------------------------
+Epoch 48 training duration 0.95 sec
+----------------------------------------
+Running validation for epoch 48/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9518
+encoder_l2             0.3097
+decoder_mse            0.0208
+decoder_cos            0.9734
+decoder_l2             0.7053
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 49/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 49/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9552
+encoder_l2             0.2987
+decoder_mse            0.0220
+decoder_cos            0.9715
+decoder_l2             0.7250
+bitwise-error          0.0000
+----------------------------------------
+Epoch 49 training duration 0.95 sec
+----------------------------------------
+Running validation for epoch 49/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9520
+encoder_l2             0.3092
+decoder_mse            0.0207
+decoder_cos            0.9731
+decoder_l2             0.7034
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 50/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 50/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9556
+encoder_l2             0.2972
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7225
+bitwise-error          0.0000
+----------------------------------------
+Epoch 50 training duration 1.03 sec
+----------------------------------------
+Running validation for epoch 50/100
+Saving validation embedding to result/sst2 2024.11.02--19-56-02/val_emb/sst2--val-emb-50.json
+Saving checkpoint to result/sst2 2024.11.02--19-56-02/checkpoints/sst2--epoch-50.pyt
+Saving checkpoint done.
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9522
+encoder_l2             0.3084
+decoder_mse            0.0198
+decoder_cos            0.9753
+decoder_l2             0.6866
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 51/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 51/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9558
+encoder_l2             0.2966
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7227
+bitwise-error          0.0000
+----------------------------------------
+Epoch 51 training duration 1.19 sec
+----------------------------------------
+Running validation for epoch 51/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9526
+encoder_l2             0.3073
+decoder_mse            0.0211
+decoder_cos            0.9734
+decoder_l2             0.7093
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 52/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 52/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9563
+encoder_l2             0.2949
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7227
+bitwise-error          0.0000
+----------------------------------------
+Epoch 52 training duration 0.89 sec
+----------------------------------------
+Running validation for epoch 52/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9527
+encoder_l2             0.3070
+decoder_mse            0.0179
+decoder_cos            0.9781
+decoder_l2             0.6535
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 53/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 53/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9565
+encoder_l2             0.2943
+decoder_mse            0.0219
+decoder_cos            0.9717
+decoder_l2             0.7232
+bitwise-error          0.0000
+----------------------------------------
+Epoch 53 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 53/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9533
+encoder_l2             0.3050
+decoder_mse            0.0201
+decoder_cos            0.9752
+decoder_l2             0.6925
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 54/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 54/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9567
+encoder_l2             0.2936
+decoder_mse            0.0218
+decoder_cos            0.9718
+decoder_l2             0.7222
+bitwise-error          0.0000
+----------------------------------------
+Epoch 54 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 54/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9535
+encoder_l2             0.3043
+decoder_mse            0.0202
+decoder_cos            0.9741
+decoder_l2             0.6947
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 55/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 55/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9570
+encoder_l2             0.2925
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7225
+bitwise-error          0.0000
+----------------------------------------
+Epoch 55 training duration 0.88 sec
+----------------------------------------
+Running validation for epoch 55/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9538
+encoder_l2             0.3032
+decoder_mse            0.0215
+decoder_cos            0.9732
+decoder_l2             0.7157
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 56/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 56/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9573
+encoder_l2             0.2915
+decoder_mse            0.0218
+decoder_cos            0.9718
+decoder_l2             0.7220
+bitwise-error          0.0000
+----------------------------------------
+Epoch 56 training duration 0.90 sec
+----------------------------------------
+Running validation for epoch 56/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9540
+encoder_l2             0.3025
+decoder_mse            0.0206
+decoder_cos            0.9734
+decoder_l2             0.7014
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 57/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 57/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9575
+encoder_l2             0.2908
+decoder_mse            0.0219
+decoder_cos            0.9717
+decoder_l2             0.7236
+bitwise-error          0.0000
+----------------------------------------
+Epoch 57 training duration 0.87 sec
+----------------------------------------
+Running validation for epoch 57/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9541
+encoder_l2             0.3022
+decoder_mse            0.0193
+decoder_cos            0.9760
+decoder_l2             0.6791
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 58/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 58/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9578
+encoder_l2             0.2900
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7229
+bitwise-error          0.0000
+----------------------------------------
+Epoch 58 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 58/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9544
+encoder_l2             0.3013
+decoder_mse            0.0209
+decoder_cos            0.9737
+decoder_l2             0.7069
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 59/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 59/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9580
+encoder_l2             0.2892
+decoder_mse            0.0220
+decoder_cos            0.9717
+decoder_l2             0.7240
+bitwise-error          0.0000
+----------------------------------------
+Epoch 59 training duration 1.11 sec
+----------------------------------------
+Running validation for epoch 59/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9545
+encoder_l2             0.3010
+decoder_mse            0.0191
+decoder_cos            0.9747
+decoder_l2             0.6747
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 60/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 60/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9583
+encoder_l2             0.2883
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7219
+bitwise-error          0.0000
+----------------------------------------
+Epoch 60 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 60/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9548
+encoder_l2             0.2999
+decoder_mse            0.0190
+decoder_cos            0.9761
+decoder_l2             0.6741
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 61/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 61/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9584
+encoder_l2             0.2878
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7221
+bitwise-error          0.0000
+----------------------------------------
+Epoch 61 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 61/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9552
+encoder_l2             0.2986
+decoder_mse            0.0221
+decoder_cos            0.9713
+decoder_l2             0.7262
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 62/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 62/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9587
+encoder_l2             0.2869
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7218
+bitwise-error          0.0000
+----------------------------------------
+Epoch 62 training duration 0.90 sec
+----------------------------------------
+Running validation for epoch 62/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9553
+encoder_l2             0.2983
+decoder_mse            0.0219
+decoder_cos            0.9728
+decoder_l2             0.7228
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 63/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 63/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9589
+encoder_l2             0.2862
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7227
+bitwise-error          0.0000
+----------------------------------------
+Epoch 63 training duration 0.90 sec
+----------------------------------------
+Running validation for epoch 63/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9553
+encoder_l2             0.2983
+decoder_mse            0.0189
+decoder_cos            0.9770
+decoder_l2             0.6718
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 64/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 64/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9590
+encoder_l2             0.2857
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7220
+bitwise-error          0.0000
+----------------------------------------
+Epoch 64 training duration 0.87 sec
+----------------------------------------
+Running validation for epoch 64/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9557
+encoder_l2             0.2971
+decoder_mse            0.0202
+decoder_cos            0.9738
+decoder_l2             0.6943
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 65/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 65/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9592
+encoder_l2             0.2852
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7216
+bitwise-error          0.0000
+----------------------------------------
+Epoch 65 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 65/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9558
+encoder_l2             0.2967
+decoder_mse            0.0196
+decoder_cos            0.9747
+decoder_l2             0.6841
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 66/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 66/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9595
+encoder_l2             0.2841
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7226
+bitwise-error          0.0000
+----------------------------------------
+Epoch 66 training duration 0.95 sec
+----------------------------------------
+Running validation for epoch 66/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9562
+encoder_l2             0.2953
+decoder_mse            0.0203
+decoder_cos            0.9748
+decoder_l2             0.6962
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 67/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 67/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9597
+encoder_l2             0.2835
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7232
+bitwise-error          0.0000
+----------------------------------------
+Epoch 67 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 67/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9563
+encoder_l2             0.2950
+decoder_mse            0.0204
+decoder_cos            0.9740
+decoder_l2             0.6982
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 68/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 68/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9599
+encoder_l2             0.2826
+decoder_mse            0.0220
+decoder_cos            0.9717
+decoder_l2             0.7238
+bitwise-error          0.0000
+----------------------------------------
+Epoch 68 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 68/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9564
+encoder_l2             0.2945
+decoder_mse            0.0191
+decoder_cos            0.9756
+decoder_l2             0.6756
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 69/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 69/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9600
+encoder_l2             0.2822
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7225
+bitwise-error          0.0000
+----------------------------------------
+Epoch 69 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 69/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9565
+encoder_l2             0.2942
+decoder_mse            0.0203
+decoder_cos            0.9749
+decoder_l2             0.6950
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 70/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 70/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9602
+encoder_l2             0.2815
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7222
+bitwise-error          0.0000
+----------------------------------------
+Epoch 70 training duration 1.28 sec
+----------------------------------------
+Running validation for epoch 70/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9568
+encoder_l2             0.2933
+decoder_mse            0.0206
+decoder_cos            0.9739
+decoder_l2             0.7018
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 71/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 71/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9603
+encoder_l2             0.2812
+decoder_mse            0.0219
+decoder_cos            0.9718
+decoder_l2             0.7230
+bitwise-error          0.0000
+----------------------------------------
+Epoch 71 training duration 1.04 sec
+----------------------------------------
+Running validation for epoch 71/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9569
+encoder_l2             0.2931
+decoder_mse            0.0199
+decoder_cos            0.9747
+decoder_l2             0.6888
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 72/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 72/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9606
+encoder_l2             0.2803
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7228
+bitwise-error          0.0000
+----------------------------------------
+Epoch 72 training duration 1.59 sec
+----------------------------------------
+Running validation for epoch 72/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9570
+encoder_l2             0.2926
+decoder_mse            0.0208
+decoder_cos            0.9737
+decoder_l2             0.7050
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 73/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 73/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9607
+encoder_l2             0.2799
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7227
+bitwise-error          0.0000
+----------------------------------------
+Epoch 73 training duration 1.02 sec
+----------------------------------------
+Running validation for epoch 73/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9571
+encoder_l2             0.2923
+decoder_mse            0.0189
+decoder_cos            0.9764
+decoder_l2             0.6711
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 74/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 74/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9609
+encoder_l2             0.2792
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7226
+bitwise-error          0.0000
+----------------------------------------
+Epoch 74 training duration 0.88 sec
+----------------------------------------
+Running validation for epoch 74/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9573
+encoder_l2             0.2915
+decoder_mse            0.0202
+decoder_cos            0.9741
+decoder_l2             0.6940
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 75/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 75/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9610
+encoder_l2             0.2788
+decoder_mse            0.0217
+decoder_cos            0.9721
+decoder_l2             0.7204
+bitwise-error          0.0000
+----------------------------------------
+Epoch 75 training duration 0.88 sec
+----------------------------------------
+Running validation for epoch 75/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9575
+encoder_l2             0.2909
+decoder_mse            0.0194
+decoder_cos            0.9758
+decoder_l2             0.6799
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 76/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 76/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9611
+encoder_l2             0.2783
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7221
+bitwise-error          0.0000
+----------------------------------------
+Epoch 76 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 76/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9578
+encoder_l2             0.2899
+decoder_mse            0.0214
+decoder_cos            0.9724
+decoder_l2             0.7147
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 77/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 77/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9612
+encoder_l2             0.2780
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7227
+bitwise-error          0.0000
+----------------------------------------
+Epoch 77 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 77/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9579
+encoder_l2             0.2895
+decoder_mse            0.0209
+decoder_cos            0.9734
+decoder_l2             0.7067
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 78/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 78/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9614
+encoder_l2             0.2774
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7220
+bitwise-error          0.0000
+----------------------------------------
+Epoch 78 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 78/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9580
+encoder_l2             0.2892
+decoder_mse            0.0199
+decoder_cos            0.9747
+decoder_l2             0.6898
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 79/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 79/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9615
+encoder_l2             0.2768
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7224
+bitwise-error          0.0000
+----------------------------------------
+Epoch 79 training duration 0.87 sec
+----------------------------------------
+Running validation for epoch 79/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9582
+encoder_l2             0.2885
+decoder_mse            0.0200
+decoder_cos            0.9745
+decoder_l2             0.6913
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 80/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 80/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9617
+encoder_l2             0.2763
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7227
+bitwise-error          0.0000
+----------------------------------------
+Epoch 80 training duration 1.38 sec
+----------------------------------------
+Running validation for epoch 80/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9584
+encoder_l2             0.2879
+decoder_mse            0.0206
+decoder_cos            0.9751
+decoder_l2             0.7010
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 81/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 81/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9619
+encoder_l2             0.2755
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7220
+bitwise-error          0.0000
+----------------------------------------
+Epoch 81 training duration 1.21 sec
+----------------------------------------
+Running validation for epoch 81/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9582
+encoder_l2             0.2884
+decoder_mse            0.0189
+decoder_cos            0.9757
+decoder_l2             0.6714
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 82/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 82/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9619
+encoder_l2             0.2755
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7227
+bitwise-error          0.0000
+----------------------------------------
+Epoch 82 training duration 0.85 sec
+----------------------------------------
+Running validation for epoch 82/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9585
+encoder_l2             0.2873
+decoder_mse            0.0198
+decoder_cos            0.9751
+decoder_l2             0.6884
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 83/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 83/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9620
+encoder_l2             0.2752
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7224
+bitwise-error          0.0000
+----------------------------------------
+Epoch 83 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 83/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9586
+encoder_l2             0.2871
+decoder_mse            0.0197
+decoder_cos            0.9753
+decoder_l2             0.6852
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 84/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 84/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9621
+encoder_l2             0.2748
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7229
+bitwise-error          0.0000
+----------------------------------------
+Epoch 84 training duration 0.89 sec
+----------------------------------------
+Running validation for epoch 84/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9587
+encoder_l2             0.2868
+decoder_mse            0.0201
+decoder_cos            0.9742
+decoder_l2             0.6932
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 85/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 85/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9623
+encoder_l2             0.2742
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7217
+bitwise-error          0.0000
+----------------------------------------
+Epoch 85 training duration 0.91 sec
+----------------------------------------
+Running validation for epoch 85/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9588
+encoder_l2             0.2865
+decoder_mse            0.0194
+decoder_cos            0.9757
+decoder_l2             0.6805
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 86/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 86/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9624
+encoder_l2             0.2736
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7221
+bitwise-error          0.0000
+----------------------------------------
+Epoch 86 training duration 0.97 sec
+----------------------------------------
+Running validation for epoch 86/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9589
+encoder_l2             0.2862
+decoder_mse            0.0195
+decoder_cos            0.9756
+decoder_l2             0.6828
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 87/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 87/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9625
+encoder_l2             0.2733
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7229
+bitwise-error          0.0000
+----------------------------------------
+Epoch 87 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 87/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9591
+encoder_l2             0.2854
+decoder_mse            0.0208
+decoder_cos            0.9738
+decoder_l2             0.7053
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 88/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 88/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9626
+encoder_l2             0.2730
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7221
+bitwise-error          0.0000
+----------------------------------------
+Epoch 88 training duration 0.99 sec
+----------------------------------------
+Running validation for epoch 88/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9590
+encoder_l2             0.2857
+decoder_mse            0.0186
+decoder_cos            0.9769
+decoder_l2             0.6658
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 89/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 89/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9627
+encoder_l2             0.2725
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7220
+bitwise-error          0.0000
+----------------------------------------
+Epoch 89 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 89/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9593
+encoder_l2             0.2848
+decoder_mse            0.0200
+decoder_cos            0.9749
+decoder_l2             0.6909
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 90/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 90/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9628
+encoder_l2             0.2723
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7225
+bitwise-error          0.0000
+----------------------------------------
+Epoch 90 training duration 0.87 sec
+----------------------------------------
+Running validation for epoch 90/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9594
+encoder_l2             0.2842
+decoder_mse            0.0213
+decoder_cos            0.9730
+decoder_l2             0.7134
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 91/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 91/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9629
+encoder_l2             0.2721
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7230
+bitwise-error          0.0000
+----------------------------------------
+Epoch 91 training duration 0.90 sec
+----------------------------------------
+Running validation for epoch 91/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9596
+encoder_l2             0.2837
+decoder_mse            0.0206
+decoder_cos            0.9738
+decoder_l2             0.7008
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 92/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 92/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9631
+encoder_l2             0.2713
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7222
+bitwise-error          0.0000
+----------------------------------------
+Epoch 92 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 92/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9595
+encoder_l2             0.2840
+decoder_mse            0.0201
+decoder_cos            0.9750
+decoder_l2             0.6926
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 93/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 93/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9630
+encoder_l2             0.2715
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7221
+bitwise-error          0.0000
+----------------------------------------
+Epoch 93 training duration 0.89 sec
+----------------------------------------
+Running validation for epoch 93/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9596
+encoder_l2             0.2839
+decoder_mse            0.0185
+decoder_cos            0.9765
+decoder_l2             0.6645
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 94/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 94/100 Step: 100/157
+loss                   0.0001
+encoder_mse            0.0000
+encoder_cos            0.9632
+encoder_l2             0.2708
+decoder_mse            0.0219
+decoder_cos            0.9719
+decoder_l2             0.7225
+bitwise-error          0.0000
+----------------------------------------
+Epoch 94 training duration 0.87 sec
+----------------------------------------
+Running validation for epoch 94/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9598
+encoder_l2             0.2828
+decoder_mse            0.0209
+decoder_cos            0.9734
+decoder_l2             0.7066
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 95/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 95/100 Step: 100/157
+loss                   0.0000
+encoder_mse            0.0000
+encoder_cos            0.9633
+encoder_l2             0.2704
+decoder_mse            0.0218
+decoder_cos            0.9721
+decoder_l2             0.7215
+bitwise-error          0.0000
+----------------------------------------
+Epoch 95 training duration 0.92 sec
+----------------------------------------
+Running validation for epoch 95/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9599
+encoder_l2             0.2828
+decoder_mse            0.0206
+decoder_cos            0.9740
+decoder_l2             0.7013
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 96/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 96/100 Step: 100/157
+loss                   0.0000
+encoder_mse            0.0000
+encoder_cos            0.9634
+encoder_l2             0.2700
+decoder_mse            0.0218
+decoder_cos            0.9719
+decoder_l2             0.7224
+bitwise-error          0.0000
+----------------------------------------
+Epoch 96 training duration 0.95 sec
+----------------------------------------
+Running validation for epoch 96/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9598
+encoder_l2             0.2832
+decoder_mse            0.0199
+decoder_cos            0.9756
+decoder_l2             0.6893
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 97/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 97/100 Step: 100/157
+loss                   0.0000
+encoder_mse            0.0000
+encoder_cos            0.9636
+encoder_l2             0.2695
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7223
+bitwise-error          0.0000
+----------------------------------------
+Epoch 97 training duration 0.89 sec
+----------------------------------------
+Running validation for epoch 97/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9600
+encoder_l2             0.2822
+decoder_mse            0.0204
+decoder_cos            0.9747
+decoder_l2             0.6972
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 98/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 98/100 Step: 100/157
+loss                   0.0000
+encoder_mse            0.0000
+encoder_cos            0.9636
+encoder_l2             0.2695
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7223
+bitwise-error          0.0000
+----------------------------------------
+Epoch 98 training duration 0.94 sec
+----------------------------------------
+Running validation for epoch 98/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9602
+encoder_l2             0.2815
+decoder_mse            0.0204
+decoder_cos            0.9743
+decoder_l2             0.6980
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 99/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 99/100 Step: 100/157
+loss                   0.0000
+encoder_mse            0.0000
+encoder_cos            0.9637
+encoder_l2             0.2690
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7215
+bitwise-error          0.0000
+----------------------------------------
+Epoch 99 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 99/100
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9602
+encoder_l2             0.2816
+decoder_mse            0.0206
+decoder_cos            0.9736
+decoder_l2             0.7004
+bitwise-error          0.0000
+----------------------------------------
+
+Starting epoch 100/100
+Batch size = 32
+Steps in epoch = 157
+Epoch: 100/100 Step: 100/157
+loss                   0.0000
+encoder_mse            0.0000
+encoder_cos            0.9637
+encoder_l2             0.2690
+decoder_mse            0.0218
+decoder_cos            0.9720
+decoder_l2             0.7219
+bitwise-error          0.0000
+----------------------------------------
+Epoch 100 training duration 0.93 sec
+----------------------------------------
+Running validation for epoch 100/100
+Saving validation embedding to result/sst2 2024.11.02--19-56-02/val_emb/sst2--val-emb-100.json
+Saving checkpoint to result/sst2 2024.11.02--19-56-02/checkpoints/sst2--epoch-100.pyt
+Saving checkpoint done.
+loss                   0.0001
+encoder_mse            0.0001
+encoder_cos            0.9602
+encoder_l2             0.2815
+decoder_mse            0.0200
+decoder_cos            0.9742
+decoder_l2             0.6913
+bitwise-error          0.0000
+----------------------------------------
